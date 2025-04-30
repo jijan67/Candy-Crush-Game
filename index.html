@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Crush Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Candy Crush</h1>
+            <div class="stats-container">
+                <div class="stat">
+                    <p>Score</p>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat">
+                    <p>High Score</p>
+                    <span id="highScore">0</span>
+                </div>
+                <div class="stat">
+                    <p>Time</p>
+                    <span id="timer">01:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="start-screen" id="startScreen">
+                <div class="start-content">
+                    <h2>Candy Crush</h2>
+                    <p>Match 3 or more candies in a row or column</p>
+                    <button id="startButton">Play Game</button>
+                </div>
+            </div>
+            
+            <div id="board"></div>
+            
+            <div class="game-over" id="gameOverScreen">
+                <div class="game-over-content">
+                    <h2 id="gameOverTitle">Game Over!</h2>
+                    <p>Your Score: <span id="finalScore">0</span></p>
+                    <p id="highScoreText">High Score: <span id="finalHighScore">0</span></p>
+                    <div id="congratsAnimation" class="congrats-animation hidden">
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="trophy">🏆</div>
+                        <h3>NEW HIGH SCORE!</h3>
+                    </div>
+                    <button id="playAgainButton">Play Again</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            Made with ❤️ by <a href="https://jijanurrahman.netlify.app/" target="_blank">Jijanur Rahman</a>
+        </footer>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="matchSound" src="https://assets.mixkit.co/active_storage/sfx/2017/2017-preview.mp3" preload="auto"></audio>
+    <audio id="swapSound" src="https://assets.mixkit.co/active_storage/sfx/2030/2030-preview.mp3" preload="auto"></audio>
+    <audio id="invalidSound" src="https://assets.mixkit.co/active_storage/sfx/2032/2032-preview.mp3" preload="auto"></audio>
+    <audio id="gameOverSound" src="https://assets.mixkit.co/active_storage/sfx/254/254-preview.mp3" preload="auto"></audio>
+    <audio id="highScoreSound" src="https://assets.mixkit.co/active_storage/sfx/220/220-preview.mp3" preload="auto"></audio>
+    <audio id="buttonClickSound" src="https://assets.mixkit.co/active_storage/sfx/270/270-preview.mp3" preload="auto"></audio>
+</body>
+</html>
